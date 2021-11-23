@@ -13,6 +13,14 @@ function criadoraDeTarefa () {
     listaDetarefas.appendChild(maisUmaTarefa)
     maisUmaTarefa.innerText = inputTarefaText.value;
     inputTarefaText.value = ""
+
+maisUmaTarefa.addEventListener('click', colorGrey);
+
+function colorGrey (evento) {
+    if (evento.target) {
+        maisUmaTarefa.style.backgroundColor = "rgb(128,128,128)"
+    }
+}
 }
 
 
