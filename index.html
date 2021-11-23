@@ -13,21 +13,24 @@
         <p id='funcionamento'>Clique duas vezes em um item para marcá-lo como completo</p>        
     </header>
     <main>
-        <section>
-            <input type="text" id="texto-tarefa">
-            <button id="criar-tarefa"></button>
+        <section id="container-box-left">
+            <input type="text" id="texto-tarefa" placeholder="adicione sua tarefa">  
+            <button id="criar-tarefa">Criar tarefa</button>
+            <ol id="lista-tarefas">Lista de tarefas</ol>
         </section>
-        <section>
-            <ol id="lista-tarefas"></ol>
+        <section id="box-list cont" class='container-box-right'>
+           
             <button id="apaga-tudo"></button>
         </section>
     </main>
     <aside>
-        <button id="mover-cima"></button>
-        <button id="mover-baixo"></button>
-        <button id="remover-finalizados"></button>
-        <button id="remover-selecionado"></button>
-        <button id="salvar-tarefas"></button>
+        <section id="box-button-right" >
+        <button id="mover-cima">mover para cima</button>
+        <button id="mover-baixo">mover para baixo</button>
+        <button id="remover-finalizados">remove finalizados</button>
+        <button id="remover-selecionado">remove selecionados</button>
+        <button id="salvar-tarefas">salvar-tarefas</button>
+        </section>
     </aside>
     
 </body>
