@@ -12,15 +12,25 @@ function criadoraDeTarefa () {
 
     listaDetarefas.appendChild(maisUmaTarefa)
     maisUmaTarefa.innerText = inputTarefaText.value;
+    maisUmaTarefa.classList = 'acessoDinamico'
     inputTarefaText.value = ""
 
 maisUmaTarefa.addEventListener('click', colorGrey);
 
+// function colorGrey (evento) {
+//     if (evento.target) {
+//         maisUmaTarefa.style.backgroundColor = "rgb(128,128,128)"
+    
+//     }
+// }
 function colorGrey (evento) {
-    if (evento.target) {
-        maisUmaTarefa.style.backgroundColor = "rgb(128,128,128)"
-    }
+    const itemDaLista = document.querySelector('.acessoDinamico');
+    itemDaLista.classList.remove('acessoDinamico')
+    itemDaLista.classList.remove('grayColor');
+    evento.target.classList.add('grayColor');
+    evento.target.classList.add('acessoDinamico')
 }
+
 }
 
 

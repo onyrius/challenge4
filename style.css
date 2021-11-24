@@ -88,3 +88,7 @@ aside {
   display: block;
   margin: 45px;
 }
+
+.grayColor {
+  background-color: gray;
+}
