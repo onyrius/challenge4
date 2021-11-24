@@ -16,6 +16,7 @@ function criadoraDeTarefa () {
     inputTarefaText.value = ""
 
 maisUmaTarefa.addEventListener('click', colorGrey);
+maisUmaTarefa.addEventListener('dblclick', completed)
 
 // function colorGrey (evento) {
 //     if (evento.target) {
@@ -33,6 +34,10 @@ function colorGrey (evento) {
 
 }
 
+function completed(evento) {
+    const tarefaFeita =  document.querySelector('.acessoDinamico');
+    evento.target.classList.toggle('completed')
+}
 
 
 
