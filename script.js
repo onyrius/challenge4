@@ -1,9 +1,5 @@
 const criarTarefaButton = document.getElementById('criar-tarefa');
-
-
-
 criarTarefaButton.addEventListener('click', criadoraDeTarefa)
-
 
 function criadoraDeTarefa () {
     let maisUmaTarefa = document.createElement('li');
@@ -37,6 +33,19 @@ function colorGrey (evento) {
 function completed(evento) {
     const tarefaFeita =  document.querySelector('.acessoDinamico');
     evento.target.classList.toggle('completed')
+}
+
+let buttonEraseAll = document.querySelector('#apaga-tudo');
+buttonEraseAll.addEventListener('click', eraseAll);
+function eraseAll (evento){
+    let deletLi = document.querySelectorAll('.acessoDinamico');
+    for (let li of deletLi) {
+        if (evento){
+            li.outerHTML = ' '
+
+        }
+    }
+    
 }
 
 
