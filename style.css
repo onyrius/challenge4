@@ -4,12 +4,15 @@ body {
   display: block;
 }
 
+
 h1 {
   border: 1px solid royalblue;
   margin-left: 40px;
   margin-right: 40px;
   padding: 0;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 #funcionamento {
@@ -20,17 +23,19 @@ h1 {
 
 main {
   border: 3px solid purple;
-  display: inline-block;
+  display: flex;
   width: 900px;
   margin-left: 40px;
+  align-items: flex-start;
 }
 
 #container-box-left {   border: 1px solid green;
-  display: inline-block;
+  display: flex;
   height: 380px;
   width: 550px;
   margin: 0;
   padding: 0;
+  flex-direction: column;
 }
 
 
@@ -62,17 +67,17 @@ input {
 button {
   display: inline-block;
   width: 150px;
-  height: 30px;
+  height: 40px;
   border: 3px solid greenyellow;
   text-align: center;
-  font-size: 2.5vh;
+  font-size: 12px;
 }
 
 .container-box-right {
   border: 1px solid red;
   width: 300px;
   height: 380px;
-  float: right;
+  display: flex;
 }
 
 aside {
@@ -80,7 +85,8 @@ aside {
   float: right;
   width: 240px;
   height: 390px;
-  margin-right: 150px;
+  margin-right: 200px;
+  display: flex;
 
 }
 
