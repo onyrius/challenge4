@@ -77,14 +77,59 @@ function windowLoad () {
     let recoverList = localStorage.getItem('listaDetarefas')
     let ol = document.querySelector('#lista-tarefas');
    ol.innerHTML = recoverList 
-   ol.addEventListener('dblclick', completed);
-   ol.addEventListener('click', colorGrey );
+}
+
+//----------Adicionar botões mover cima mover para baixo ---
+let botaumMoverCima = document.querySelector('#mover-cima');
+botaumMoverCima.addEventListener('click', moverParaCima);
 
 
+function moverParaCima() {
+let liCompleted = document.querySelector('.grayColor');
+console.log('entrou em cima')
+if (!liCompleted){return}
+let liReferencia = liCompleted.previousSibling;
+if(!liReferencia){return}
+liCompleted.parentNode.insertBefore(liCompleted, liReferencia);
+}
+
+
+let botaumMoverBaixo = document.querySelector("#mover-baixo");
+botaumMoverBaixo.addEventListener('click', moverParaBaixo);
+
+function moverParaBaixo() {
+    let liSelecionado = document.querySelector('.grayColor');
+    if (!liSelecionado){return}
+    let liReferencia = liSelecionado.nextSibling;
+    if(!liReferencia){return}
+    
+    liSelecionado.parentNode.insertBefore(liSelecionado, liReferencia);   
+    liReferencia.after(liSelecionado)
+    
 
 }
 
-  // localStorage.setItem('lista', JSON.stringify())
+//------------ remover selecionado
+let botaumRemoverSelecionados = document.querySelector('#remover-selecionado');
+
+botaumRemoverSelecionados.addEventListener('click', apagaSelecionado)
+console.log(botaumRemoverSelecionados);
+
+function apagaSelecionado() {
+    let selecionado = document.querySelector('.grayColor');
+    console.log('entrou')
+    if(selecionado) {
+        selecionado.remove()
+    }
+    
+}
+
+/**Source Com a ajuda das pessoas amigas : Kamila Hydalgo; Lucas Lisboa e Gustavo Mathias consegui resolver as questões 11, 12 e 13. Segue gitHub:
+ * https://github.com/Guthias
+ * https://github.com/LucasLisboaMotta
+ * https://github.com/Kamila-hydalgo
+*/
+
 
 
 
