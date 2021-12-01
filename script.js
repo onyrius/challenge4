@@ -22,11 +22,14 @@ maisUmaTarefa.addEventListener('dblclick', completed)
 //     }
 // }
 function colorGrey (evento) {
-    const itemDaLista = document.querySelector('.acessoDinamico');
-    itemDaLista.classList.remove('acessoDinamico')
+    const itemDaLista = document.querySelector('.grayColor');
+
+    // itemDaLista.classList.remove('acessoDinamico')
+    if (itemDaLista) {
     itemDaLista.classList.remove('grayColor');
+    }
     evento.target.classList.add('grayColor');
-    evento.target.classList.add('acessoDinamico')
+    // evento.target.classList.add('acessoDinamico')
 }
 
 }
@@ -58,13 +61,34 @@ function erasePart (){
     }
 }
 
+//------------- adiciona botão salvar-tarefas ---------
+const buttonSalvarTarefa = document.getElementById('salvar-tarefas');
+buttonSalvarTarefa.addEventListener('click', salvaTarefas);
 
-    
+function salvaTarefas(){
+ let ol = document.querySelector('#lista-tarefas');
+ listaCompleta = ol.innerHTML
+ localStorage.setItem('listaDetarefas', listaCompleta);
+
+}
+
+window.addEventListener('load', windowLoad)
+function windowLoad () {
+    let recoverList = localStorage.getItem('listaDetarefas')
+    let ol = document.querySelector('#lista-tarefas');
+   ol.innerHTML = recoverList 
+   ol.addEventListener('dblclick', completed);
+   ol.addEventListener('click', colorGrey );
+
+
+
+}
+
+  // localStorage.setItem('lista', JSON.stringify())
 
 
 
 
-    
-    
-    
+
+
 

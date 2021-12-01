@@ -102,3 +102,7 @@ aside {
 .completed {
   text-decoration: line-through;
 }
+
+button:hover {
+  cursor: pointer;
+}
