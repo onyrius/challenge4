@@ -1,5 +1,9 @@
 # Week Challenge 4-5
 
+
+<p> Foi uma semana tão intensa que acabei escrevendo sobre essa experiência!! Um artigo sobre o medo e os desafios de ser mulher no mundo da Tecnologia <a href="https://www.linkedin.com/pulse/sobre-o-medo-suelen-arruda/?trackingId=Llj%2F9cqjR6i3ZzX7mxoS4Q%3D%3D">Eu senti medo!</a> 
+</p>
+
 ## Todo list Project
 <p> Um todo-list desenvolvido a partir da manipulação do DOM. Seria simples se fosse apenas este projeto naquela semana. Mas foram 5 projetos!! Uma semana intensa de atividades e riqueza de conteúdo na Trybe. Uma das coisas que mais aprendi foi a gerir meu tempo diante de tantos afazeres </p>
 
